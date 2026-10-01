@@ -1,0 +1,115 @@
+/* Step 2: Universal Selector Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Step 2: Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Step 2: Header Styling */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+}
+
+/* Step 2: Form Container Styling */
+form {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    /* Center the form */
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+/* Step 4: .form-item Class Selector */
+.form-item {
+    display: grid;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Step 4: .column1 Class Selector (Label 3fr, Input 1fr) */
+.column1 {
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+}
+
+/* Step 4: .column2 Class Selector (Label 1fr, Input 2fr) */
+.column2 {
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+/* Step 2: Label Styling */
+label {
+    font-weight: 600;
+    text-align: right;
+    padding-right: 10px;
+    color: #2c3e50;
+}
+
+/* Step 2: Input, Select, and Textarea Styling */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    width: 100%;
+}
+
+/* Step 2: Checkbox Styling */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+
+/* Step 2: Button Styling */
+button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #34495e;
+}
+
+/* Step 2: Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}

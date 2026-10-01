@@ -1,0 +1,75 @@
+/* Estilos generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 2rem;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* Tabla */
+table {
+    width: 80%;
+    margin: 2rem auto;
+    border-collapse: collapse;
+    /* Une los bordes adyacentes en uno solo */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+/* Encabezados y celdas */
+th,
+td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Encabezado de tabla */
+thead th {
+    background-color: #2c3e50;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Pie de tabla */
+tfoot tr {
+    background-color: #ecf0f1;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Filas alternas (efecto cebra) */
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Efecto hover sobre filas */
+tbody tr:hover {
+    background-color: #dfe6e9;
+    transition: background-color 0.3s ease;
+}
+
+/* Celdas con rowspan destacadas */
+td[rowspan] {
+    background-color: #34495e;
+    color: #ffffff;
+    font-weight: bold;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* Caption */
+caption {
+    caption-side: top;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 10px;
+    color: #2c3e50;
+}

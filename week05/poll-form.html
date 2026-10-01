@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poll Form - Styled</title>
+    <!-- Link to the new CSS file -->
+    <link rel="stylesheet" href="styles/poll-form.css">
+</head>
+
+<body>
+    <header>
+        <h1>Weekly Poll</h1>
+    </header>
+
+    <main>
+        <form>
+            <!-- Full Name: column2 (Label takes 1 part, Input takes 2 parts) -->
+            <div class="form-item column2">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+            </div>
+
+            <!-- Email: column2 (Label takes 1 part, Input takes 2 parts) -->
+            <div class="form-item column2">
+                <label for="useremail">Email Address:</label>
+                <input type="email" id="useremail" name="useremail" required>
+            </div>
+
+            <!-- Browser: column1 (Label takes 3 parts, Select takes 1 part) -->
+            <div class="form-item column1">
+                <label for="browser">Favorite Browser:</label>
+                <select name="browser" id="browser">
+                    <option value="chrome">Chrome</option>
+                    <option value="safari">Safari</option>
+                    <option value="edge">Edge</option>
+                    <option value="brave">Brave</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Pet: column1 (Label takes 3 parts, Checkbox takes 1 part) -->
+            <div class="form-item column1">
+                <label for="pet">Do you have a household pet?</label>
+                <input type="checkbox" id="pet" name="pet">
+            </div>
+
+            <!-- Places Lived: column1 (Label takes 3 parts, Textarea takes 1 part) -->
+            <div class="form-item column1">
+                <label for="feedback">Places Lived:</label>
+                <textarea name="feedback" id="feedback" rows="5"
+                  placeholder="Enter your answer here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="form-item">
+                <button type="submit">Submit Poll</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 WDD130 Course</p>
+    </footer>
+</body>
+
+</html>
