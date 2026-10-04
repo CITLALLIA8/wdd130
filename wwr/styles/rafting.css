@@ -242,7 +242,7 @@ fieldset.form-group label {
 .submit-btn {
     align-self: flex-start;
     background-color: var(--secondary-color);
-    color: #fff;
+    color: var(--accent1-color);
     font-weight: bold;
     font-size: 1rem;
     border: none;
@@ -253,6 +253,7 @@ fieldset.form-group label {
 
 .submit-btn:hover {
     background-color: var(--primary-color);
+    color: #fff;
 }
 
 /* ---------- Footer ---------- */
