@@ -21,7 +21,6 @@ body {
 header,
 main,
 footer {
-    width: 840px;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -55,7 +54,6 @@ header img {
     width: auto;
 }
 
-/* ---------- Nav dentro del header (Flex) ---------- */
 header nav {
     margin: 0;
     padding: 0;
@@ -78,15 +76,16 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* ---------- Hero ---------- */
 .hero {
     position: relative;
+    width: 100%;
 }
 
 .hero img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 300px;
+    object-fit: cover;
 }
 
 .hero h1 {
@@ -118,14 +117,12 @@ header nav a:hover {
     border-radius: 6px;
 }
 
-/* ---------- History ---------- */
 main section:first-of-type {
-    max-width: 700px;
-    margin: 24px auto;
+    margin: 0;
+    padding: 0;
     text-align: left;
 }
 
-/* ---------- Adventures (Grid con 5 figures) / Employees (Grid con 3 figures) ---------- */
 .adventure-gallery,
 .employee-gallery {
     display: grid;
@@ -163,7 +160,6 @@ main section:first-of-type {
     color: var(--accent1-color);
 }
 
-/* ---------- Contact Us: info + map ---------- */
 .contact-info {
     text-align: center;
 }
@@ -187,7 +183,6 @@ main section:first-of-type {
     max-width: 100%;
 }
 
-/* ---------- Contact Us: form ---------- */
 .contact-form form {
     display: flex;
     flex-direction: column;
@@ -256,7 +251,6 @@ fieldset.form-group label {
     color: #fff;
 }
 
-/* ---------- Footer ---------- */
 footer {
     display: flex;
     justify-content: space-between;
@@ -286,4 +280,44 @@ footer p a {
 .socialmedia img {
     width: 32px;
     height: 32px;
+}
+
+main section > img {
+    width: 600px;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+main article img {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid var(--primary-color);
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+td {
+    background-color: var(--accent2-color);
+}
+
+table img {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
 }
