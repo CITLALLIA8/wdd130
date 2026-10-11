@@ -3,6 +3,7 @@
     --secondary-color: #f28c28;
     --accent1-color: #12333f;
     --accent2-color: #e8f4f8;
+    --white-color: #ffffff;
     --heading-font: "Trebuchet MS", Verdana, sans-serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
@@ -96,7 +97,7 @@ header nav a:hover {
     text-align: center;
     opacity: 0.7;
     background-color: var(--accent1-color);
-    color: #fff;
+    color: var(--white-color);
 }
 
 .hero article {
@@ -160,7 +161,9 @@ main section:first-of-type {
     color: var(--accent1-color);
 }
 
-.contact-info {
+main section.contact-info {
+    margin: 16px;
+    padding: 8px;
     text-align: center;
 }
 
@@ -208,6 +211,7 @@ main section:first-of-type {
     border: 1px solid var(--primary-color);
     border-radius: 4px;
     font-family: var(--body-font);
+    color: var(--accent1-color);
 }
 
 fieldset.form-group {
@@ -248,7 +252,7 @@ fieldset.form-group label {
 
 .submit-btn:hover {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--white-color);
 }
 
 footer {
@@ -260,11 +264,11 @@ footer {
     text-align: left;
     padding: 16px;
     background-color: var(--accent1-color);
-    color: #fff;
+    color: var(--white-color);
 }
 
 footer p a {
-    color: #fff;
+    color: var(--white-color);
 }
 
 .socialmedia {
@@ -309,7 +313,7 @@ td {
 
 th {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white-color);
 }
 
 td {
