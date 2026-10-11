@@ -1,13 +1,15 @@
+/* ---------- Variables ---------- */
 :root {
     --primary-color: #0b5d7a;
     --secondary-color: #f28c28;
     --accent1-color: #12333f;
     --accent2-color: #e8f4f8;
-    --white-color: #ffffff;
+    --light-color: #ffffff;
     --heading-font: "Trebuchet MS", Verdana, sans-serif;
     --body-font: Arial, Helvetica, sans-serif;
 }
 
+/* ---------- General ---------- */
 * {
     margin: 0;
     padding: 0;
@@ -19,20 +21,12 @@ body {
     color: var(--accent1-color);
 }
 
-header,
-main,
-footer {
-    max-width: 100%;
-    margin: 0 auto;
-}
-
 h1,
 h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
-nav,
 p,
 section,
 article {
@@ -40,53 +34,61 @@ article {
     padding: 8px;
 }
 
-/* ---------- Header (Grid) ---------- */
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    font-weight: bold;
+}
+
+/* ---------- Header ---------- */
 header {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 16px;
-    background-color: var(--accent2-color);
     padding: 8px 16px;
+    background-color: var(--accent2-color);
 }
 
 header img {
     height: 50px;
-    width: auto;
 }
 
-header nav {
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul {
+header ul {
     list-style: none;
     display: flex;
-    gap: 16px;
     justify-content: flex-end;
+    gap: 16px;
 }
 
-header nav a {
+header a {
     color: var(--primary-color);
     font-weight: bold;
     text-decoration: none;
 }
 
-header nav a:hover {
+header a:hover {
     text-decoration: underline;
 }
 
+/* ---------- About page ---------- */
 .hero {
     position: relative;
-    width: 100%;
 }
 
-.hero img {
+.hero > img {
     display: block;
     width: 100%;
     height: 300px;
-    object-fit: cover;
 }
 
 .hero h1 {
@@ -97,7 +99,7 @@ header nav a:hover {
     text-align: center;
     opacity: 0.7;
     background-color: var(--accent1-color);
-    color: var(--white-color);
+    color: var(--light-color);
 }
 
 .hero article {
@@ -107,23 +109,16 @@ header nav a:hover {
     width: 60%;
     background-color: var(--accent2-color);
     border-left: 6px solid var(--secondary-color);
-    border-radius: 8px;
-    font-size: 0.9rem;
 }
 
 .hero article img {
     float: right;
     width: 125px;
-    margin: 0 0 8px 12px;
-    border-radius: 6px;
+    height: auto;
+    margin-left: 12px;
 }
 
-main section:first-of-type {
-    margin: 0;
-    padding: 0;
-    text-align: left;
-}
-
+/* ---------- Galleries ---------- */
 .adventure-gallery,
 .employee-gallery {
     display: grid;
@@ -139,39 +134,18 @@ main section:first-of-type {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.adventure-gallery figure,
-.employee-gallery figure {
-    margin: 0;
-    text-align: center;
-}
-
 .adventure-gallery img,
 .employee-gallery img {
     width: 100%;
     height: 130px;
-    object-fit: cover;
-    border-radius: 6px;
 }
 
-.adventure-gallery figcaption,
-.employee-gallery figcaption {
-    margin-top: 6px;
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: var(--accent1-color);
-}
-
-main section.contact-info {
-    margin: 16px;
-    padding: 8px;
+/* ---------- Contact page ---------- */
+.contact-info {
     text-align: center;
 }
 
-.contact-details {
-    margin-bottom: 16px;
-}
-
-.contact-details address {
+address {
     font-style: normal;
 }
 
@@ -181,12 +155,11 @@ main section.contact-info {
 }
 
 .map-wrapper iframe {
-    border: 2px solid var(--accent2-color);
-    border-radius: 6px;
     max-width: 100%;
+    border: 2px solid var(--accent2-color);
 }
 
-.contact-form form {
+form {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -200,103 +173,55 @@ main section.contact-info {
     gap: 4px;
 }
 
-.form-group label {
+label,
+legend {
     font-weight: bold;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
+fieldset label,
+.checkbox-group label {
+    font-weight: normal;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
     padding: 8px;
     border: 1px solid var(--primary-color);
-    border-radius: 4px;
     font-family: var(--body-font);
     color: var(--accent1-color);
 }
 
-fieldset.form-group {
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
+fieldset {
     padding: 12px;
-}
-
-fieldset.form-group legend {
-    font-weight: bold;
-    padding: 0 6px;
-}
-
-fieldset.form-group label {
-    display: block;
-    font-weight: normal;
-    margin: 4px 0;
-}
-
-.checkbox-group label {
-    font-weight: normal;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    border: 1px solid var(--primary-color);
 }
 
 .submit-btn {
     align-self: flex-start;
+    padding: 10px 24px;
+    border: 0;
     background-color: var(--secondary-color);
     color: var(--accent1-color);
-    font-weight: bold;
     font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    padding: 10px 24px;
+    font-weight: bold;
     cursor: pointer;
 }
 
 .submit-btn:hover {
     background-color: var(--primary-color);
-    color: var(--white-color);
+    color: var(--light-color);
 }
 
-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 16px;
-    text-align: left;
-    padding: 16px;
-    background-color: var(--accent1-color);
-    color: var(--white-color);
-}
-
-footer p a {
-    color: var(--white-color);
-}
-
-.socialmedia {
-    display: flex;
-    gap: 6px;
-    justify-content: flex-end;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-.socialmedia img {
-    width: 32px;
-    height: 32px;
-}
-
+/* ---------- Trips page ---------- */
 main section > img {
     width: 600px;
-    max-width: 100%;
     height: 250px;
-    object-fit: cover;
 }
 
 main article img {
     width: 250px;
     height: 160px;
-    object-fit: cover;
 }
 
 table {
@@ -313,7 +238,7 @@ td {
 
 th {
     background-color: var(--primary-color);
-    color: var(--white-color);
+    color: var(--light-color);
 }
 
 td {
@@ -323,5 +248,26 @@ td {
 table img {
     width: 120px;
     height: 80px;
-    object-fit: cover;
+}
+
+/* ---------- Footer ---------- */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+    background-color: var(--accent1-color);
+    color: var(--light-color);
+}
+
+.socialmedia {
+    display: flex;
+    gap: 6px;
+}
+
+.socialmedia img {
+    width: 32px;
+    height: 32px;
 }
